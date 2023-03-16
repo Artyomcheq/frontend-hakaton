@@ -33,7 +33,17 @@ const getAccounts = async () => {
 	
     const response = await fetch("http://www.nikita.php-f22.ru/api/login", config)
 	const data = await response.json()
-	console.log(data)
+
+	arr = []
+	arr.push(data)
+	arr.forEach(el => {
+		const token = el.access_token
+		const bar = el.token_type
+		
+		if (token) {
+			window.location.href = "../index.html"
+		}
+	})
 	
 	return data
 }

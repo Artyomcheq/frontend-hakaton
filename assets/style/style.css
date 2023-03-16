@@ -146,7 +146,7 @@ input {
     margin-left: 10px;
 }
 
-.hero__get-pnr {
+.hero__render-pnr {
     display: flex;
     justify-content: space-between;
     border: solid 1px var(--color-dark);
@@ -253,6 +253,22 @@ input {
 
 .airline__sub-div .airline__sub-title {
     margin-left: 10px;
+}
+
+.btn__hide-div {
+    padding: 5px 0 0;
+    display: flex;
+    justify-content: end;
+}
+
+.btn__hide {
+    width: 70px;
+    height: 17px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 /* HERO SECTION */
 

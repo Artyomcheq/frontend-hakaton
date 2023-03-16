@@ -20,10 +20,12 @@ const getPnr = async () => {
 
     const response = await fetch('http://www.nikita.php-f22.ru/api/decoder', config)
     const data = await response.json()
+
     const arr = []
     arr.push(data)
-    console.log(arr)
     arr.forEach(aviaInfo => {
+        pnrTag.className = "hero__render-pnr"
+
         const companyDiv = document.createElement("div")
         companyDiv.className = "avia__info"
 
@@ -85,14 +87,12 @@ const getPnr = async () => {
         pnrTag.appendChild(arrivCityDiv)
         pnrTag.appendChild(moreInfoBtn)
 
-        // moreInfoBtn.addEventListener("click", () => {
-        //     pnrTag.innerHTML =""
-        // })
+        
 
         moreInfoBtn.addEventListener("click", () => {
-            pnrTag.innerHTML =""
+            pnrTag.innerHTML = ""
             arr.forEach(aviaInfo => {
-                const infoDiv = document.querySelector("div")
+                const infoDiv = document.createElement("div")
                 infoDiv.className = "more__info"
 
                 const depArrCountry = document.createElement("div")
@@ -158,8 +158,15 @@ const getPnr = async () => {
                 arrAirportTag.className = "deperture__airport-title"
                 arrAirportTag.innerHTML = aviaInfo.arrival_airport
 
+                const btnHideDiv = document.createElement("div")
+                btnHideDiv.className = "btn__hide-div"
+
+                const btnHide = document.createElement("button")
+                btnHide.className = "btn__hide"
+                btnHide.innerHTML = "hide"
                 
-                
+                btnHideDiv.appendChild(btnHide)
+
                 timeArrivalDiv.appendChild(timeDateArrivalDiv)
                 timeArrivalDiv.appendChild(arrAirportTag)
 
@@ -188,9 +195,88 @@ const getPnr = async () => {
                 pnrTag.appendChild(timeDepartureDiv)
                 pnrTag.appendChild(airlineDiv)
                 pnrTag.appendChild(timeArrivalDiv)
+                pnrTag.appendChild(btnHideDiv)
+            
+            
+                
+                btnHide.addEventListener("click", () => {
+                    arr.forEach(aviaInfo => {
+                        pnrTag.innerHTML = ""
+                        pnrTag.className = "hero__render-pnr"
+                
+                        const companyDiv = document.createElement("div")
+                        companyDiv.className = "avia__info"
+                
+                        const companyTag = document.createElement("p")
+                        companyTag.className = "avia__title"
+                        companyTag.innerHTML = aviaInfo.airline
+                
+                        const cityTimeDiv = document.createElement("div")
+                        cityTimeDiv.className = "city__time-div"
+                
+                        const cityDiv = document.createElement("div")
+                        cityDiv.className = "city__div"
+                
+                        const cityTag = document.createElement("h3")
+                        cityTag.className = "city__title"
+                        cityTag.innerHTML = aviaInfo.departure_country
+                
+                        const timeDiv = document.createElement("div")
+                        timeDiv.className = "time__div"
+                
+                        const timeTag = document.createElement("h3")
+                        timeTag.className = "city__sub-title"
+                        timeTag.innerText = aviaInfo.departure_time + ","
+                
+                        const dateTag = document.createElement("p")
+                        dateTag.className = "date__title"
+                        dateTag.innerHTML = aviaInfo.departure_date
+                
+                        const arrivCityDiv = document.createElement("div")
+                        arrivCityDiv.className = "arrival__city-div"
+                
+                        const arrivCityTag = document.createElement("h3")
+                        arrivCityTag.className = "arrival__title"
+                        arrivCityTag.innerHTML = aviaInfo.arrival_country
+                
+                        const arrivTimeTag = document.createElement("h3")
+                        arrivTimeTag.className = "arrival__sub-title"
+                        arrivTimeTag.innerHTML = aviaInfo.arrival_time
+                
+                        const moreInfoBtn = document.createElement("button")
+                        moreInfoBtn.className = "info__btn"
+                        moreInfoBtn.innerHTML = "подробнее"
+                
+                        timeDiv.appendChild(timeTag)
+                        timeDiv.appendChild(dateTag)
+                
+                        cityDiv.appendChild(cityTag)
+                
+                        cityTimeDiv.appendChild(cityDiv)
+                        cityTimeDiv.appendChild(timeDiv)
+                
+                        companyDiv.appendChild(companyTag)
+                
+                        arrivCityDiv.appendChild(arrivCityTag)
+                        arrivCityDiv.appendChild(arrivTimeTag)
+                
+                        pnrTag.appendChild(cityTimeDiv)
+                        pnrTag.appendChild(companyDiv)
+                        pnrTag.appendChild(arrivCityDiv)
+                        pnrTag.appendChild(moreInfoBtn)
+                    })
+                })
             })
         })
     })
+    if (!inpPnr.value) {
+        pnrTag.style.border = "none"
+        pnrTag.innerHTML = ""
+    } else {
+        pnrTag.style.border = "solid 1px"
+    }
+
+    inpPnr.value = ""
 
     return arr
 }

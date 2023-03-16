@@ -1,5 +1,3 @@
-
-
 const nameInp = document.querySelector("#signin__name")
 const emailInp = document.querySelector("#signin__email")
 const passInp = document.querySelector("#signin__pass")

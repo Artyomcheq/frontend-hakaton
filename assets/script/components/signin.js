@@ -58,7 +58,7 @@ signinBtn.addEventListener("click", async (e) => {
 	console.log(await createForm(form));
 	
 	if (form.name && form.email && form.pass) {
-		
+		window.location.href = "../login.html"
 	} else if (!form.name) {
 		console.log("Не введено имя")
 	} else if (!form.email) {

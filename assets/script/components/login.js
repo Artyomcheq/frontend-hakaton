@@ -2,11 +2,11 @@ const loginBtn = document.querySelector(".login__btn")
 const emailInp = document.querySelector("#login__inp-emil")
 const passInp = document.querySelector("#login__inp-pass")
 
-const getAccounts = async (form) => {
+const getAccounts = async () => {
 	
 	const obj = {
 		email: emailInp.value,
-		passInp: passInp.value
+		password: passInp.value
 	}
 	
 	const config = {
@@ -41,17 +41,5 @@ const getAccounts = async (form) => {
 loginBtn.addEventListener("click", async (e) => {
     e.preventDefault()
 
-	// form = {
-	// 	email: emailInp.value,
-	// 	pass: passInp.value
-	// }
-
-	// if (form.email && form.pass) {
-	// 	window.location.href = "./index.html"
-	// } else {
-	// 	console.log("Хуево");
-	// }
-
-
-	console.log(await getAccounts())
+	await getAccounts()
 })

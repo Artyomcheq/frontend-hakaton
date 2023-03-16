@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/media.css">
+</head>
+<body>
+    <section class="header">
+        <div class="container">
+            <div class="header__center">
+                <div class="header__grid">
+                    <div class="header__logo d-flex">
+                        <a href="./index.html" class="logo__title">Logotype</a>
+                    </div>
+                    <nav class="header__nav d-flex justify-beetwen">
+                        <a href="./index.html" class="header__link">Home</a>
+                        <a href="./signin.html" class="header__link">Sign up</a>
+                        <a href="./login.html" class="header__link"> Log in</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__field d-flex justify-beetwen">
+                <div class="hero__elements">
+                    <div class="field__logo">
+                        <h3 class="hero__logo">Logotype</h3>
+                    </div>
+                    <div class="hero__info">
+                        <p class="hero__title">Convert PNR</p>
+                        <p class="hero__sub-title">Let's make the PNR understandable for the passenger</p>
+                    </div>
+                    <div class="hero__get-pnr"></div>
+                </div>
+                <form action="http://www.nikita.php-f22.ru/api/decoder" method="post" class="form d-flex">
+                <input class="hero__input" type="text" name="code" placeholder="Insert PNR" id="pnr">
+                <button class="form__btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/script/script.js"></script>
+</body>
+</html>

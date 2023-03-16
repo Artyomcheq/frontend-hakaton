@@ -1,0 +1,370 @@
+@import url("./fonts.css");
+
+:root {
+    --color-white: #FFF;
+    --color-grey: #dddddd;
+    --color-dark: rgb(18, 29, 59);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    background: none;
+    border: none;
+}
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+input {
+    background: none;
+    border: none;
+}
+.d-flex {
+    display: flex;
+}
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.justify-beetwen {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+/* UNIQUE */
+
+/* HEADER SECTION */
+
+.header {
+    background-color: var(--color-dark);
+}
+
+.header__center {
+    height: 70px;
+    padding: 0 15px;
+}
+
+.header__grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header__logo {
+    align-items: center;
+}
+
+.logo__title {
+    color: var(--color-white);
+    font-size: 24px;
+}
+
+.header__nav {
+    align-items: center;
+}
+
+.header__link {
+    color: var(--color-white);
+    font-size: 18px;
+}
+
+/* HEADER SECTION */
+/* HERO SECTION */
+
+.hero {
+    padding: 20px;
+    height: calc(100vh - 70px);
+    background-color: var(--color-grey);
+}
+
+.hero .container {
+    height: 100%;
+}
+
+.hero__field {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    padding: 0 15px 15px;
+}
+
+.hero__field input {
+    width: 100%;
+    height: 40px;
+}
+
+.field__logo {
+    width: 100%;
+    border-bottom: solid 1px var(--color-dark);
+}
+
+.hero__logo {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 0;
+    color: var(--color-dark);
+}
+
+.hero__title {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 0;
+    color: var(--color-dark);
+}
+
+.hero__info {
+    padding-bottom: 30px;
+}
+
+.hero__sub-title {
+    font-size: 18px;
+    color: var(--color-dark);
+}
+
+.hero__input {
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: var(--color-grey);
+}
+
+.form__btn {
+    width: 65px;
+    text-transform: uppercase;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.hero__get-pnr {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px var(--color-dark);
+    padding: 15px;
+}
+
+.pnr__more-info {
+    border: solid 1px var(--color-dark);
+    padding: 15px;
+}
+
+.city__title {
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+.date__title {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    color: var(--color-dark);
+}
+
+.city__sub-title {
+    font-size: 15px;
+    color: var(--color-dark);
+}
+
+.time__div .date__title {
+    margin-left: 5px;
+}
+
+.time__div {
+    display: flex;
+}
+
+.avia__info {
+    display: flex;
+    align-items: center;
+}
+
+.avia__title {
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+.arrival__title {
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+.arrival__sub-title {
+    display: flex;
+    justify-content: end;
+    font-size: 15px;
+    color: var(--color-dark);
+}
+
+.countres__title {
+    display: flex;
+}
+
+.countres__title .arrival__info {
+    margin-left: 3px;
+}
+
+.departure__div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--color-grey);
+}
+
+.time__date-div {
+    display: flex;
+}
+
+.deperture__airport-title {
+    color: var(--color-dark);
+    font-size: 12px;
+}
+
+.airline__div {
+    display: flex;
+    justify-content: end;
+}
+
+.airline__sub-div {
+    display: flex;
+    padding: 10px 0;
+}
+
+.airline__title {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    color: var(--color-dark);
+}
+
+.airline__sub-title {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+}
+
+.airline__sub-div .airline__sub-title {
+    margin-left: 10px;
+}
+/* HERO SECTION */
+
+/* HERO SIGNIN SECTION */
+
+.hero__signin {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 50vh;
+    height: 50vh;
+}
+
+.hero__signin .hero__field {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.hero__field .signin__elements {
+    width: 100%;
+}
+
+.signin__elements .signin__inputs {
+    width: 100%;
+}
+
+.signin__elements {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin__input {
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: var(--color-grey);
+}
+
+.signin__btn {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.signin__inputs {
+    flex-direction: column;
+}
+
+.signin__inputs .signin__input {
+    width: 100%;
+}
+
+/* HERO SIGNIN SECTION */
+
+/* LOGIN SECTION */
+
+.hero__login {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 50vh;
+    height: 50vh;
+}
+
+.hero__login .hero__field {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__field .login__elements {
+    width: 100%;
+}
+
+.login__elements .login__inputs {
+    width: 100%;
+}
+
+.login__elements {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: var(--color-grey);
+}
+
+.login__btn {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.login__inputs {
+    flex-direction: column;
+}
+
+.login__inputs .login__input {
+    width: 100%;
+}
+/* LOGIN SECTION */

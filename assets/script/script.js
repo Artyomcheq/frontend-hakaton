@@ -23,6 +23,7 @@ const getPnr = async () => {
 
     const arr = []
     arr.push(data)
+    pnrTag.innerHTML = ""
     arr.forEach(aviaInfo => {
         pnrTag.className = "hero__render-pnr"
 
@@ -273,6 +274,8 @@ const getPnr = async () => {
     } else {
         pnrTag.style.border = "solid 1px"
     }
+
+    
 
     inpPnr.value = ""
 

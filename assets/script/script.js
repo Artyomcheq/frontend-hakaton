@@ -67,7 +67,7 @@ const getPnr = async () => {
 
         const moreInfoBtn = document.createElement("button")
         moreInfoBtn.className = "info__btn"
-        moreInfoBtn.innerHTML = "подробнее"
+        moreInfoBtn.innerHTML = "Show more"
 
         timeDiv.appendChild(timeTag)
         timeDiv.appendChild(dateTag)
@@ -86,8 +86,6 @@ const getPnr = async () => {
         pnrTag.appendChild(companyDiv)
         pnrTag.appendChild(arrivCityDiv)
         pnrTag.appendChild(moreInfoBtn)
-
-        
 
         moreInfoBtn.addEventListener("click", () => {
             pnrTag.innerHTML = ""
@@ -197,7 +195,7 @@ const getPnr = async () => {
                 pnrTag.appendChild(timeArrivalDiv)
                 pnrTag.appendChild(btnHideDiv)
             
-            
+                
                 
                 btnHide.addEventListener("click", () => {
                     arr.forEach(aviaInfo => {
@@ -245,7 +243,7 @@ const getPnr = async () => {
                 
                         const moreInfoBtn = document.createElement("button")
                         moreInfoBtn.className = "info__btn"
-                        moreInfoBtn.innerHTML = "подробнее"
+                        moreInfoBtn.innerHTML = "Show more"
                 
                         timeDiv.appendChild(timeTag)
                         timeDiv.appendChild(dateTag)

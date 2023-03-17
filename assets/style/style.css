@@ -62,6 +62,10 @@ input {
     align-items: center;
 }
 
+.logo__title:hover {
+    color: rgb(155, 155, 245);
+}
+
 .logo__title {
     color: var(--color-white);
     font-size: 24px;
@@ -69,11 +73,35 @@ input {
 
 .header__nav {
     align-items: center;
+    justify-content: end;
 }
 
 .header__link {
+    display: flex;
+    align-items: center;
     color: var(--color-white);
     font-size: 18px;
+    text-transform: uppercase;
+}
+
+svg {
+    fill: #dddddd;
+}
+
+svg:hover  .header__link, svg:hover {
+   fill: rgb(155, 155, 245);
+}
+
+.header__link:hover ~ svg, .header__link:hover{
+    color: rgb(155, 155, 245);
+}
+
+.header__link svg {
+    margin-left: 10px;
+}
+
+.header__nav svg {
+    margin-left: 10px;
 }
 
 /* HEADER SECTION */
@@ -144,6 +172,10 @@ input {
     color: var(--color-white);
     border-radius: 5px;
     margin-left: 10px;
+}
+
+.form__btn:hover {
+    background-color: rgb(31, 50, 99);
 }
 
 .hero__render-pnr {
@@ -255,6 +287,18 @@ input {
     margin-left: 10px;
 }
 
+.info__btn {
+    width: 60px;
+    text-transform: uppercase;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: 5px;
+    font-size: 10px;
+}
+.info__btn:hover {
+    background-color: rgb(31, 50, 99);
+}
+
 .btn__hide-div {
     padding: 5px 0 0;
     display: flex;
@@ -269,6 +313,10 @@ input {
     border-radius: 3px;
     font-size: 11px;
     text-transform: uppercase;
+}
+
+.btn__hide:hover {
+    background-color: rgb(31, 50, 99);
 }
 /* HERO SECTION */
 
@@ -316,6 +364,11 @@ input {
     border-radius: 5px;
     background-color: var(--color-dark);
     color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.signin__btn:hover {
+    background-color: rgb(31, 50, 99);
 }
 
 .signin__inputs {
@@ -326,6 +379,18 @@ input {
     width: 100%;
 }
 
+.registration__link {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.regist__link:hover {
+    text-decoration: underline;
+    color: rgb(31, 50, 99);
+}
 /* HERO SIGNIN SECTION */
 
 /* LOGIN SECTION */
@@ -374,6 +439,11 @@ input {
     border-radius: 5px;
     background-color: var(--color-dark);
     color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.login__btn:hover {
+    background-color: rgb(31, 50, 99);
 }
 
 .login__inputs {

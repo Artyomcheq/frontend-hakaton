@@ -2,16 +2,102 @@
 
 }
 @media (max-width: 1040px) {
-
+    .container {
+        max-width: 900px;
+    }
 }
 @media (max-width: 920px) {
-
+    .container {
+        max-width: 800px;
+    }
+    .signup__field {
+        height: 340px;
+    }
 }
 @media (max-width: 768px) {
-
+    .container {
+        max-width: 678px;
+    }
+    .signup__field {
+        height: 330px;
+    }
+    .header__logo {
+        font-size: 21px;
+    }
+    .header__link {
+        font-size: 16px;
+    }
+    .header__nav svg {
+        width: 24px;
+        height: 24px;
+    }
+    .hero__logo {
+        font-size: 21px;
+    }
+    .hero__title {
+        font-size: 17px;
+    }
+    .hero__sub-title {
+        font-size: 16px;
+    }
+    .form__btn {
+        font-size: 13px;
+    }
+    .city__title {
+        font-size: 18px;
+    }
+    .city__sub-title {
+        font-size: 16px;
+    }
+    .avia__title {
+        font-size: 18px;
+    }
+    .arrival__title {
+        font-size: 18px;
+    }
+    .arrival__sub-title {
+        font-size: 16px;
+    }
+    .hero__logo {
+        font-size: 19px;
+    }
+    .registration__link {
+        font-size: 12px;
+    }
+    .login__btn {
+        font-size: 13px;
+    }
+    .signin__btn {
+        font-size: 13px;
+    }
 }
 @media (max-width: 540px) {
-
+    .container {
+        max-width: 500px;
+    }
+    .hero__render-pnr {
+        flex-direction: column;
+        align-items: center;
+    }
+    .city__time-div {
+        padding: 0 0 12px 0;
+    }
+    .city__title {
+        text-align: center;   
+    }
+    .time__div {
+        border-bottom: solid 1px var(--color-grey);
+    }
+    .avia__title {
+        padding: 0 0 12px 0;
+    }
+    .arrival__city-div {
+        padding: 0 0 10px 0;
+        border-top: solid 1px var(--color-grey);
+    }
+    .arrival__sub-title {
+        justify-content: center;
+    }
 }
 @media (max-width: 390px) {
 
